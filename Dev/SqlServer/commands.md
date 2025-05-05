@@ -1,6 +1,7 @@
 ### DOWNLOAD THE OFFICIAL SQL SERVER IMAGEN
+```docker
 > docker pull mcr.microsoft.com/mssql/server:2022-latest
-
+```
 
 ### CREATION OF CONTAINER WITH VOLUME
  > docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=TuPasswordFuerte123!" -p 1433:1433 --name sqlserverWithVolume -v ~/sqlserver_data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
