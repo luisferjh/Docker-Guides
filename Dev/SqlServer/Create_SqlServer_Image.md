@@ -25,7 +25,7 @@ C:\Users\juan\sqlserver_data
 > docker run -it -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=TuPasswordFuerte123!" -p 1433:1433 --name sqlserverWithVolume -v sqlserver_volume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
-### ENTRAR AL CONTENEDOR Y HACER LA CARPETA DONDE VAMOS A GUARDAR EL BACKUP / 
+### ENTER THE CONTAINER AND CREATE THE FOLDER WHERE WE ARE GOING TO STORE THE BACKUP. / 
 
 > docker exec -it sqlserverWithVolume bash
 ```cmd
