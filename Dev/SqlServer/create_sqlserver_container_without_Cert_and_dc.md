@@ -22,6 +22,9 @@ services:
       - ./scripts:/scripts
       - sqlserver_data:/var/opt/mssql/data
     command: /bin/bash /scripts/entrypoint.sh
+volumes:
+  sqlserver_volume:  
+    external: true     
 ```
 
 in the volumes property we set 3 lines:
@@ -36,6 +39,9 @@ in this folder we have the entrypoint.sh and the restore.sql file. these file ar
 this line setup the volume in the container
 
 the **command** property run a command when the docker-compose is executed
+
+![alt text](./staticFiles/volume.png)
+This tells Docker Compose: 'this volume already exists, don't create it, just use it'
 
 #### restore.sql
 
